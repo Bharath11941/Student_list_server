@@ -8,7 +8,8 @@ import dbconnect from "./config/mongodb.js"
 import userRoute from './routes/userRoute.js';
 dbconnect()
 app.use(cors({
-  origin:"http://localhost:5173",
+  // origin:"http://localhost:5173",
+  origin:"student-list-client-sgnn.vercel.app",
   methods:['GET','POST','PUT','PATCH'],
   credentials:true
 }))
