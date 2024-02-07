@@ -57,7 +57,7 @@ export const getStudents = async (req, res) => {
       ];
     }
     // const studentData = await User.find(inputs).sort(sortResult).skip((pageNo * itemsPerPage)).limit(itemsPerPage)
-    const studentData = await User.find(inputs);
+    const studentData = await User.find(inputs).sort({createdAt:-1});
     // const count = await User.countDocuments()
     res.status(200).json(studentData);
   } catch (error) {
