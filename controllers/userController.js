@@ -2,6 +2,7 @@ import User from "../models/userModel.js";
 
 export const userRegister = async (req, res) => {
   try {
+    
     const { name, email, mobile, gender, education, address } = req.body;
     const existingUser = await User.findOne({ $or: [{ email }, { mobile }] });
     if (existingUser) {
